@@ -15,3 +15,8 @@ header {
     font-size: 1em;
     font-weight: 200;
 }
+
+table {
+    display: flex;
+    flex-direction: column;
+}

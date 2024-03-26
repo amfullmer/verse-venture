@@ -4,11 +4,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchBox = document.getElementById('input');
     const searchBtn = document.getElementById('searchbtn');
     const poemLanding = document.getElementById('poem');
+    const searchType = document.getElementById('searchFilter');
 
     searchBtn.addEventListener('click', () => {
         poemLanding.innerHTML = '';
+        let searchUrl = '';
 
-        const searchUrl = `${baseUrl}/title/${searchBox.value}`;
+        if (searchBox.value.trim() === '') {
+            console.error('Search input is empty');
+            return;
+        }
+
+        if (searchType.value === 'title') {
+            searchUrl = `${baseUrl}/title/${searchBox.value}`;
+        } else if (searchType.value === 'author') {
+            searchUrl = `${baseUrl}/author/${searchBox.value}`;
+        }
 
         fetch(searchUrl).then(response => {
             if (!response.ok) {
