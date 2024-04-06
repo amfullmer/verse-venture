@@ -12,19 +12,19 @@ Verse Venture is a Vue.js web application designed for exploring and discovering
 ## Installation
 
 1. **Clone the Repository**:
-git clone https://github.com/amfullmer/verse-venture.git
+```git clone https://github.com/amfullmer/verse-venture.git```
 
 2. **Navigate to the Project Directory**:
-cd verse-venture
+```cd verse-venture```
 
 3. **Install Dependencies**:
-npm install
+```npm install```
 
 4. **Start the Development Server**:
-npm run dev
+```npm run dev```
 
 5. **View the Application**:
-Open your web browser and go to `http://localhost:5173`.
+```Open your web browser and go to `http://localhost:5173`.```
 
 ## Usage
 
@@ -38,10 +38,6 @@ Open your web browser and go to `http://localhost:5173`.
 
 3. **Navigate Between Pages**:
 - Use the navigation links to explore different pages of the application.
-
-## Contributing
-
-Contributions are welcome! If you find any bugs or have suggestions for improvement, please open an issue or submit a pull request.
 
 ## Credits
 
