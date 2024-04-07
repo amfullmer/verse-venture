@@ -3,8 +3,9 @@
     <router-link :to="{ name: 'Home' }">Return Home</router-link>
   </div>
   <div>
-    <input type="text" v-model="searchQuery" placeholder="Enter poem title">
-    <button @click="fetchPoems">Search</button>
+    <input type="text" v-model="searchQuery" placeholder="Enter poem title" @keyup.enter="fetchPoems"> 
+    &nbsp;
+    <button class="search-button" @click="fetchPoems">Search</button>
 
     <div v-if="loading">
       Loading...
@@ -65,4 +66,21 @@ export default {
 </script>
 
 <style scoped>
+ .search-button {
+    background-color: #ce6ddd;
+    border: none;
+    color: white;
+    padding: 3px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .search-button:hover {
+    background-color: #652d6d;
+  }
 </style>
