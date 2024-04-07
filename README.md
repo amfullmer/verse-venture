@@ -41,7 +41,7 @@ Open your web browser and go to `http://localhost:5173`.
 1. **Search for Poems**:
 - Select search by author or search by title.
 - Enter input in the search bar.
-- Press the "Search" button.
+- Press the "Search" button or or hit Enter.
 
 2. **View Search Results**:
 - Poems matching the search query will be displayed.
