@@ -18,7 +18,7 @@ git clone https://github.com/amfullmer/verse-venture.git
 
 3. **Navigate to the Project Directory**:
 ```plaintext
-cd verse-venture
+cd verse-venture/verse_venture
 ```
 
 5. **Install Dependencies**:
