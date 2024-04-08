@@ -1,4 +1,7 @@
 <template>
+  <header>
+    <h1>{{ updateHeader() }}</h1>
+  </header>
   <div>
     <router-link :to="{ name: 'Home' }">Return Home</router-link>
   </div>
@@ -27,6 +30,7 @@
 <script>
 import axios from 'axios';
 import Poem from '../components/PoemCard.vue';
+import { getRandomHeaderPhrase } from '../headers';
 
 export default {
   data() {
@@ -63,6 +67,10 @@ export default {
         .finally(() => {
           this.loading = false;
         });
+    },
+    updateHeader() {
+      const randomPhrase = getRandomHeaderPhrase();
+      return randomPhrase;
     }
   }
 };

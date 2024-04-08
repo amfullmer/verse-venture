@@ -1,4 +1,7 @@
 <template>
+  <header>
+    <h1>Welcome to Verse Venture</h1>
+  </header>
   <div>
     <router-link :to="{ name: 'SearchAuthor' }">Search Poems by Author</router-link>
     &nbsp;&nbsp;&nbsp;
