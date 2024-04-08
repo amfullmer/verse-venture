@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>{{ updateHeader() }}</h1>
+    <h1>{{ headerPhrase }}</h1>
   </header>
   <div>
     <router-link :to="{ name: 'Home' }">Return Home</router-link>
@@ -38,7 +38,8 @@ export default {
       searchQuery: '',
       searchType: 'author',
       poems: [],
-      loading: false
+      loading: false,
+      headerPhrase: ''
     };
   },
   components: {
@@ -68,10 +69,9 @@ export default {
           this.loading = false;
         });
     },
-    updateHeader() {
-      const randomPhrase = getRandomHeaderPhrase();
-      return randomPhrase;
-    }
+  },
+  created() {
+    this.headerPhrase = getRandomHeaderPhrase();
   }
 };
 </script>
