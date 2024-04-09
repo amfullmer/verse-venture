@@ -34,6 +34,7 @@ export default {
   data() {
     return {
       searchQuery: '',
+      searchType: 'title',
       poems: [],
       loading: false,
       headerPhrase: ''
@@ -49,7 +50,7 @@ export default {
       }
       this.loading = true;
       const baseUrl = 'https://poetrydb.org/';
-      const searchUrl = `${baseUrl}title/${this.searchQuery}`;
+      const searchUrl = `${baseUrl}${this.searchType}/${this.searchQuery}`;
 
       axios.get(searchUrl)
         .then(response => {
